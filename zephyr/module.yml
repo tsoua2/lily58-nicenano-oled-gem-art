@@ -1,1 +1,4 @@
-test
+name: "zmk-shield-nice!view-gem"
+build:
+  settings:
+    board_root: .
