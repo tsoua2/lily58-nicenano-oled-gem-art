@@ -9,6 +9,21 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        page.down {
+            bindings = <&kp PG_DN>;
+            key-positions = <27 28>;
+            layers = <0>;
+        };
+
+        page.up {
+            bindings = <&kp PG_UP>;
+            key-positions = <15 16>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -62,11 +77,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans  &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                    &trans      &trans          &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DELETE
+&trans              &trans               &trans  &trans  &kp PG_UP          &kp PG_DN                          &kp INSERT  &trans          &kp UP_ARROW    &trans            &trans             &trans
+&kp CAPSLOCK        &trans               &trans  &trans  &trans             &trans                             &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &trans             &trans
+&trans              &trans               &trans  &trans  &trans             &trans           &trans    &trans  &trans      &trans          &trans          &trans            &trans             &trans
+                                                 &trans  &trans             &trans           &trans    &trans  &trans      &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -74,7 +89,7 @@
 
         layer_3 {
             bindings = <
-&bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &bt BT_CLR                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp DELETE
+&bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &bt BT_CLR                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
 &trans          &trans  &trans  &trans  &trans  &trans                        &trans        &trans        &trans        &trans        &trans        &trans
 &trans          &trans  &trans  &trans  &trans  &trans                        &trans        &trans        &trans        &trans        &trans        &trans
 &trans          &trans  &trans  &trans  &trans  &trans      &trans    &trans  &trans        &trans        &trans        &trans        &trans        &trans
