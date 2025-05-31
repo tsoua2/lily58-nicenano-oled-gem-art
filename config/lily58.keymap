@@ -16,11 +16,14 @@
             bindings = <&kp PG_DN>;
             key-positions = <27 28>;
             layers = <0>;
+            timeout-ms = <200>;
         };
 
         page.up {
             bindings = <&kp PG_UP>;
             key-positions = <15 16>;
+            timeout-ms = <200>;
+            layers = <0>;
         };
     };
 
