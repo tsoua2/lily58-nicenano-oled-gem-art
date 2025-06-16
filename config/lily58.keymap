@@ -9,20 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        page.down {
-            bindings = <&kp PG_DN>;
-            key-positions = <27 28>;
-            layers = <0>;
-        };
-
-        page.up {
-            bindings = <&kp PG_UP>;
-            key-positions = <15 16>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
